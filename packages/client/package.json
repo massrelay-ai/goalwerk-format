@@ -1,0 +1,1 @@
+{"name":"@atingo/client","private":true,"type":"module","version":"0.1.0","license":"Apache-2.0","main":"./src/index.ts","scripts":{"typecheck":"tsc -p tsconfig.json --noEmit","test":"node --test --experimental-strip-types test/client.test.ts"}}

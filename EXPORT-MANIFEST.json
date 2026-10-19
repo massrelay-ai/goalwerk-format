@@ -1,0 +1,314 @@
+{
+  "commit": "87d1452803b4d16b3a72c190f8fec046da551e54",
+  "count": 77,
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "bf5af395651ca17733f353413c3c5a4bb4a92c141a3a8a499e7f62af97ab7bd0"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "63f947ad0e2c5238b9751b221e4afcfa071f6021dc35c629fba3af85d1fca301"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "32e0eec66fcf6474da1acc02fd153926b5d929e7865929e381398041a24090f8"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "6d3e24d4e4c7da279ad304c6c5bfc3dd567e363524b1e1df829bda772d43a3ef"
+    },
+    {
+      "path": "crates/atingo-path/Cargo.toml",
+      "sha256": "bab9b6b1d0ae0ce62e9318ec7703a9badd14650a96ed27eab96cf2cf4c70331d"
+    },
+    {
+      "path": "crates/atingo-path/src/bin/atingo-path.rs",
+      "sha256": "486e7b994033cfd31f7e16e0f8295383ce4bc0243c985911201b485ab302a8da"
+    },
+    {
+      "path": "crates/atingo-path/src/graph.rs",
+      "sha256": "30bef0fbda95c53577883e7c46a97c576c95478da51cb3aaec45cbfa4807d9ef"
+    },
+    {
+      "path": "crates/atingo-path/src/i18n.rs",
+      "sha256": "9d6f36a8aeba2f1d8ae7bca3c5d0431eb8a41fd8d6a8cb714325cc010be0e264"
+    },
+    {
+      "path": "crates/atingo-path/src/lib.rs",
+      "sha256": "5bc73e2ea4ff07e1ac24a2c1d32c2653e2d6472ecd0e45159ce5b6a008483f47"
+    },
+    {
+      "path": "crates/atingo-path/src/loop_data.rs",
+      "sha256": "38299a9a3d347e9dce1011bb43a9e88cd257452f002ce24f7dc621b5a13fa8ad"
+    },
+    {
+      "path": "crates/atingo-path/src/pins.rs",
+      "sha256": "efb31423f98f376581af3ebfa56115ff2cc219b2147b17ff3c1a2e66a20e7cfa"
+    },
+    {
+      "path": "crates/atingo-path/src/price.rs",
+      "sha256": "4305caa2e5513025c9a8bb2076a9687acec3c3d7dc8ecc3b10467ea139e61765"
+    },
+    {
+      "path": "crates/atingo-path/src/review.rs",
+      "sha256": "08b059272f66fc59a67e6962ea5ca0656b42d3ac3022f1dce380561be8ea5980"
+    },
+    {
+      "path": "crates/atingo-path/src/validate.rs",
+      "sha256": "2871158c04f05054fe7ac9397faa1168aa16d4254cb50860afc4c0fddaa7a76c"
+    },
+    {
+      "path": "crates/atingo-path/src/validate_graph.rs",
+      "sha256": "a547579784ac23eeeb8dae044bc81156aec6b7f3c5f669df6447bcc61c680002"
+    },
+    {
+      "path": "crates/atingo-path/src/validate_loop.rs",
+      "sha256": "5f944b2a8bd97270b2ca86f99ed5ac714aea978e52310701e6b3fedd7187a519"
+    },
+    {
+      "path": "crates/atingo-path/src/wasm.rs",
+      "sha256": "12b4561f06b5075dad895413459ca0c5afdda084e583e43b6edb40bee3c998b3"
+    },
+    {
+      "path": "crates/atingo-path/tests/cli.rs",
+      "sha256": "c68d0b964bdb01f0ce6f9f27f3ae796181d66c4807420c99710fee9cf49e1f08"
+    },
+    {
+      "path": "crates/atingo-path/tests/deserialize_packs.rs",
+      "sha256": "1b95a3b309691e2430c5e7f45157edc84b3b4e620776b0e90fbeaf73710683a6"
+    },
+    {
+      "path": "crates/atingo-path/tests/fixtures.rs",
+      "sha256": "ca9ddf448d0795ad233cee90fb1c195b9abbfa78de922bf5eedfeee13803cb08"
+    },
+    {
+      "path": "crates/atingo-path/tests/forbidden.rs",
+      "sha256": "16ac0d62f0b4ce00e50996299d867e17a9713bbd7ac773487fc9770c7e8d6ed8"
+    },
+    {
+      "path": "crates/atingo-path/tests/graph.rs",
+      "sha256": "da81fbf19fb5a0342af06aeabbb402d534e8da4ecc80dc8dce8654a407d8b956"
+    },
+    {
+      "path": "crates/atingo-path/tests/i18n.rs",
+      "sha256": "69747b1d4097a3290aafc1c1537db0a2c3a8ac74446c008368cf773a578c577d"
+    },
+    {
+      "path": "crates/atingo-path/tests/price.rs",
+      "sha256": "7070b27525e5f6895372bc8e99d00e11c65ed9e2be80fe024e70c075219ef9b4"
+    },
+    {
+      "path": "crates/atingo-path/tests/review.rs",
+      "sha256": "931745cae4601b6fb243ec652637689af42d67c727eafa27ae3ce579d960ebad"
+    },
+    {
+      "path": "crates/atingo-path/tests/rrule.rs",
+      "sha256": "a944b14dede53f810853a589a7f86a9e426f9ce5b4799251108b17d9962f1f62"
+    },
+    {
+      "path": "examples/sample-pack/evidence/sample.json",
+      "sha256": "0966c92df7afe11869161d8870b0ce529afabefe920e279a821397cd0df572ae"
+    },
+    {
+      "path": "examples/sample-pack/follow-up/sample.json",
+      "sha256": "973443b8e52fb09ca1fdcc045239fc2c55ddf22e21adff5f1f3ca4f1d858d112"
+    },
+    {
+      "path": "examples/sample-pack/goal-kinds/sample.json",
+      "sha256": "45f539a90b15799e77e45a9c3cd1db0fce2497eedd4ffde78e15e9ed8ebd7457"
+    },
+    {
+      "path": "examples/sample-pack/lesson-templates/sample.share.json",
+      "sha256": "6451d877b63c3e363634768b92a5c1cb19fa5c3794570e832e6d0cd563e1666e"
+    },
+    {
+      "path": "examples/sample-pack/lesson-templates/sample.sow.json",
+      "sha256": "2849ae8ac42c33cc4d600c3bc2361de184eb9bcc6e19c359f2a5e9b8be054bcb"
+    },
+    {
+      "path": "examples/sample-pack/lesson-templates/sample.tend.json",
+      "sha256": "86a5870abd1a1f45d8187aacd6c51b85aa26e183fb843c6af064b60459b8a164"
+    },
+    {
+      "path": "examples/sample-pack/paths/sample.json",
+      "sha256": "666dfe4580b02fd9ba591e03b6320c64e21b1efa2f91d55b930fcd3b544db548"
+    },
+    {
+      "path": "examples/sample-pack/personas/evals/sample_coach.json",
+      "sha256": "1f01e5008e03447d8664aa2fb6d7fe0e75759242e6b9aa5d04321bb29851f2db"
+    },
+    {
+      "path": "examples/sample-pack/personas/sample_coach.json",
+      "sha256": "cfcd2b5d23f51cc0e9278b412e85baad4f243b50092a9525e51a931e35941eac"
+    },
+    {
+      "path": "packages/client/generate.mjs",
+      "sha256": "ea4e7b694fad515ca15da68ceb3279b3371da03e4d5ff8cc2aa608eeda48b07b"
+    },
+    {
+      "path": "packages/client/openapi/SOURCE.json",
+      "sha256": "8f3be9c614025ab2ba8f0d3ebc5eda5601a6e4eb6b62e525c53d4587d7c36a7b"
+    },
+    {
+      "path": "packages/client/openapi/massrelay-full.json",
+      "sha256": "12d0a429b131ad6426c7e76431c50a1b2f656c9e848b9882c5ae7ddc3a9459e6"
+    },
+    {
+      "path": "packages/client/openapi/massrelay.json",
+      "sha256": "aa6f2043911a3a9a5fc1a67ca03b938c9b7279082e8bbb10b434f1361a41b2f3"
+    },
+    {
+      "path": "packages/client/package.json",
+      "sha256": "7fac4835ad712a51b2d69a4c94370478940dee6e0751a5af21c89ecdc0327ad7"
+    },
+    {
+      "path": "packages/client/src/index.ts",
+      "sha256": "fb76c72b63e1e52e9172e347d086810ce195dc79d5d59247a6a91459d8735959"
+    },
+    {
+      "path": "packages/client/src/kernel.d.ts",
+      "sha256": "b2cdbdfec6bb613750abe9ae504c21912d090d67e2104086bb0ab5ac92ba7e34"
+    },
+    {
+      "path": "packages/client/src/untyped-doors.ts",
+      "sha256": "5e887c3e5eb405cd1d6f3ec102202e9a65b61b557c7a1c5af73813226977755e"
+    },
+    {
+      "path": "packages/client/test/client.test.ts",
+      "sha256": "65a1b8ef6381edd9b9ed4d7d4203fa99cabaa63a70b86cb8e5b5163bf169d340"
+    },
+    {
+      "path": "packages/client/tsconfig.json",
+      "sha256": "61d5e5bdc10a64be0eab72c60e04f8801f94fb5db78560a4d02e340d9c5bb4c2"
+    },
+    {
+      "path": "packs/atingo/SCHEMA.md",
+      "sha256": "590b62d5ff9ad3b1081f6e2b4e59f588ea6a9f6f2da25403b3d5f1f0e01ff10f"
+    },
+    {
+      "path": "packs/atingo/goal-kinds/wealth.json",
+      "sha256": "250e57df3b45adb1305e8ace2cb0e5a367a3cdf8a285fb6897f84b5e8bdb3211"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "a7a23801522d469e93021507fc88e9f5651056fce0e6aa22b3d3157c5f3dc6fe"
+    },
+    {
+      "path": "tools/packs/check.mjs",
+      "sha256": "6aa5d3142b2f78260dfb7f0b829189170d894808eff55678ee9dedf7d10734f2"
+    },
+    {
+      "path": "tools/packs/evals-check.mjs",
+      "sha256": "95cb2aab8e4de747d6acfd186890ba5c2a1dea4827cef912f220c762dec9a6b7"
+    },
+    {
+      "path": "tools/packs/kernel-pins.json",
+      "sha256": "3be423ab07bf0efd3c2b997f844564e9f058cfb7d67a16ed1b824fbc0e77771a"
+    },
+    {
+      "path": "tools/packs/pins.mjs",
+      "sha256": "fed2c65d9e2b8f74bd4a0b73aeb594b2cc425c1d01dcb90b1035d619dfc2625f"
+    },
+    {
+      "path": "tools/packs/schemas/block-multiple_choice.schema.json",
+      "sha256": "46d0637b9b7f634d00ba20d64ace5cbd28d5ef4bda11893d2188a3ec3a3d9fb5"
+    },
+    {
+      "path": "tools/packs/schemas/block-numeric_input.schema.json",
+      "sha256": "ed5f8f48700a0d2874856c2a2d8567944ac912e7ecb080729d8477d08f10083d"
+    },
+    {
+      "path": "tools/packs/schemas/block-ordering.schema.json",
+      "sha256": "4f30a7b424c38f0eaa067e5be82793a9bf5e8ac8768f98b4c019b48620826bd9"
+    },
+    {
+      "path": "tools/packs/schemas/block-slides.schema.json",
+      "sha256": "7d8db630c2a5317c71b41751bfc9166f14d3d962714530ccb784042abfa43f4a"
+    },
+    {
+      "path": "tools/packs/schemas/eval-set.schema.json",
+      "sha256": "b05034321a06bab6fd37681fc6f738ef02214214ef2d9acabec4afcfd127b5b7"
+    },
+    {
+      "path": "tools/packs/schemas/evidence.schema.json",
+      "sha256": "a1f36f17b9744d7ed9dd7cf8aba06312f236e16db1e12bb7382ae7d8e4fe5e54"
+    },
+    {
+      "path": "tools/packs/schemas/follow-up.schema.json",
+      "sha256": "934f617024e20672eb32a9d7b42e3e56fa670d0176c0bdb403c771280668bab2"
+    },
+    {
+      "path": "tools/packs/schemas/goal-kinds.schema.json",
+      "sha256": "7a2f3700be82484f3f035ab24d69a67151317e32bb7087c89ac7c305c20b6df0"
+    },
+    {
+      "path": "tools/packs/schemas/graph-competencies.schema.json",
+      "sha256": "1ebf90908e0c6e1361ddf42213897f31606e8e8c92fac99d937e6a5028612a21"
+    },
+    {
+      "path": "tools/packs/schemas/graph-items.schema.json",
+      "sha256": "17421e22850087dc59e6c447edd337538b1e9b2f030ad97d3cf479e69f75a7d1"
+    },
+    {
+      "path": "tools/packs/schemas/graph-lessons.schema.json",
+      "sha256": "a75fb196d1f8d667f8763daaaababa63c524d79cc08a7574a0558ef8ecfb15bb"
+    },
+    {
+      "path": "tools/packs/schemas/graph-occupations.schema.json",
+      "sha256": "e60d3e3d39e02c99d6728dc388f47a4ff94953ef5334a578b61a82ae89bd1033"
+    },
+    {
+      "path": "tools/packs/schemas/graph-sectors.schema.json",
+      "sha256": "7c1174a9d145177e52c9a7cb65d3e9109fab3e30e3a33b434136c4383dbb90ea"
+    },
+    {
+      "path": "tools/packs/schemas/graph-sources.schema.json",
+      "sha256": "5337689847291be5c7806fc4f350c524994348c86869257548f915bce54825fc"
+    },
+    {
+      "path": "tools/packs/schemas/i18n.schema.json",
+      "sha256": "48f48fa95e4107b74d3bfed1ca039f2dc4c7e726a1cfa0eb4d8c2de70115b9b3"
+    },
+    {
+      "path": "tools/packs/schemas/lesson-template.schema.json",
+      "sha256": "113d94d7fdb69727efcab62fa23b6094c01da40017fce0ea42854e31c30c6bde"
+    },
+    {
+      "path": "tools/packs/schemas/motives.schema.json",
+      "sha256": "2b3eebdb8a2e3f6b7b3a47404fcde5a80835c25133dc03ce872d1d3d5b121cec"
+    },
+    {
+      "path": "tools/packs/schemas/path.schema.json",
+      "sha256": "51ab4c22b6d7d47d2616b948c905829ce6003be328331a5d16af71b56f23f38e"
+    },
+    {
+      "path": "tools/packs/schemas/persona.schema.json",
+      "sha256": "ff3a2bfadc5d0aa6dab1b73f2bbc2dc46ceecdef8e5cae3bb117b458c086e509"
+    },
+    {
+      "path": "tools/packs/schemas/prices.schema.json",
+      "sha256": "8da8870fccab80982b3945eb6a1584aa265dbc65e6682d9e2d025cac40a7d46f"
+    },
+    {
+      "path": "tools/packs/schemas/review.schema.json",
+      "sha256": "6c6b34536fd6d5d53c1f5ee8dc8f68f3495a9e96ec57e64b47c14db4748e6763"
+    },
+    {
+      "path": "README.md",
+      "sha256": "73e3d52f416b9580826803447b5e35cde7d1a8760c63adf91d5cb16431438c4a"
+    },
+    {
+      "path": "package.json",
+      "sha256": "cca2f4241cbf932b4922c78928bcd5036dfee5895ee0a2fef96b58fe08f94f28"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "dd0b8e9145fd06f15b55119a0f178f279af890890972c1e3d4eb4ff5bf250a55"
+    }
+  ]
+}

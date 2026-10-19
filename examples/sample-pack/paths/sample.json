@@ -1,0 +1,100 @@
+{
+  "id": "sample",
+  "tier": "platform",
+  "title": "A windowsill sample",
+  "locale_default": "en",
+  "persona": "sample_coach",
+  "_comment": "SYNTHETIC example written for this repository. Nothing here is a lesson anyone should rely on; it exists to show every file the format needs.",
+  "root": "sow",
+  "nodes": [
+    {
+      "id": "sow",
+      "goal_kind": "sprout_a_seed",
+      "lesson_template": "sample.sow",
+      "blocks_allowed": [
+        "checklist",
+        "form"
+      ],
+      "evidence": "entity_row",
+      "receipt_kind": "receipt",
+      "sources": [
+        {
+          "title": "Sample source sowa (synthetic)",
+          "url": "https://example.org/sample/sowa"
+        },
+        {
+          "title": "Sample source sowb (synthetic)",
+          "url": "https://example.org/sample/sowb"
+        }
+      ]
+    },
+    {
+      "id": "tend",
+      "goal_kind": "keep_a_plant_alive",
+      "lesson_template": "sample.tend",
+      "blocks_allowed": [
+        "chart",
+        "checklist",
+        "timeline"
+      ],
+      "evidence": "connector_value",
+      "receipt_kind": "receipt",
+      "sources": [
+        {
+          "title": "Sample source tenda (synthetic)",
+          "url": "https://example.org/sample/tenda"
+        },
+        {
+          "title": "Sample source tendb (synthetic)",
+          "url": "https://example.org/sample/tendb"
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "goal_kind": "share_a_cutting",
+      "lesson_template": "sample.share",
+      "blocks_allowed": [
+        "form",
+        "person_card"
+      ],
+      "evidence": "receipt",
+      "receipt_kind": "receipt",
+      "sources": [
+        {
+          "title": "Sample source sharea (synthetic)",
+          "url": "https://example.org/sample/sharea"
+        },
+        {
+          "title": "Sample source shareb (synthetic)",
+          "url": "https://example.org/sample/shareb"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "sow",
+      "to": "tend",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "tend",
+      "to": "share",
+      "kind": "prerequisite"
+    }
+  ],
+  "people_kinds_by_node": {
+    "sow": [
+      "skill-exchange"
+    ],
+    "tend": [
+      "skill-exchange"
+    ],
+    "share": [
+      "neighbourhood-help"
+    ]
+  },
+  "price_ref": null,
+  "certificate": null
+}

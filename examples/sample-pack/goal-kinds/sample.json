@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "family": "windowsill",
+  "_comment": "SYNTHETIC. Two goal kinds for the sample path; a goal kind is a schema row, not a curriculum.",
+  "kinds": [
+    {
+      "id": "sprout_a_seed",
+      "title": "Sprout a first seed",
+      "evidence_kind": "entity_row",
+      "verifier": "key_result",
+      "window_days": 30,
+      "attestation_fallback": true
+    },
+    {
+      "id": "keep_a_plant_alive",
+      "title": "Keep a plant alive for a month",
+      "evidence_kind": "connector_value",
+      "verifier": "key_result",
+      "window_days": 45,
+      "attestation_fallback": true
+    },
+    {
+      "id": "share_a_cutting",
+      "title": "Share a cutting with a neighbour",
+      "evidence_kind": "receipt",
+      "verifier": "professional_signoff",
+      "window_days": 60,
+      "attestation_fallback": false
+    }
+  ]
+}

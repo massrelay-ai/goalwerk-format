@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["path_id", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "path_id": { "type": "string" },
+    "_comment": { "type": "string" },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["verifier", "binding", "fallback", "sources_of_truth"],
+        "properties": {
+          "verifier": { "type": "string" },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "connector_id": { "type": "string" },
+              "method_id": { "type": "string" },
+              "eval_set": { "type": "string" },
+              "script_ref": { "type": "string" },
+              "expect": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["field", "op", "value"],
+                "properties": { "field": { "type": "string" }, "op": { "enum": [">=", ">", "==", "<=", "<"] }, "value": { "type": "string" } }
+              }
+            }
+          },
+          "fallback": { "enum": ["attestation", "none"] },
+          "sources_of_truth": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        }
+      }
+    }
+  }
+}

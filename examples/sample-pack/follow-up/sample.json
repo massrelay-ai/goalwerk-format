@@ -1,0 +1,74 @@
+{
+  "path_id": "sample",
+  "nodes": {
+    "sow": {
+      "rrule": "FREQ=WEEKLY;INTERVAL=1",
+      "grace_days": 2,
+      "nudges": [
+        {
+          "after_hours": 0,
+          "channel": "push",
+          "template_id": "due_today"
+        },
+        {
+          "after_hours": 48,
+          "channel": "email",
+          "template_id": "due_earlier"
+        }
+      ],
+      "escalate": {
+        "after_days": 7,
+        "to": "skill-exchange"
+      },
+      "pause_rules": [
+        "learner_paused"
+      ]
+    },
+    "tend": {
+      "rrule": "FREQ=WEEKLY;INTERVAL=1",
+      "grace_days": 2,
+      "nudges": [
+        {
+          "after_hours": 0,
+          "channel": "push",
+          "template_id": "due_today"
+        },
+        {
+          "after_hours": 48,
+          "channel": "email",
+          "template_id": "due_earlier"
+        }
+      ],
+      "escalate": {
+        "after_days": 7,
+        "to": "skill-exchange"
+      },
+      "pause_rules": [
+        "learner_paused"
+      ]
+    },
+    "share": {
+      "rrule": "FREQ=WEEKLY;INTERVAL=1",
+      "grace_days": 2,
+      "nudges": [
+        {
+          "after_hours": 0,
+          "channel": "push",
+          "template_id": "due_today"
+        },
+        {
+          "after_hours": 48,
+          "channel": "email",
+          "template_id": "due_earlier"
+        }
+      ],
+      "escalate": {
+        "after_days": 7,
+        "to": "neighbourhood-help"
+      },
+      "pause_rules": [
+        "learner_paused"
+      ]
+    }
+  }
+}

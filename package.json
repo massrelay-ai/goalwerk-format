@@ -1,0 +1,25 @@
+{
+  "name": "atingo-format",
+  "version": "0.1.0",
+  "description": "The Atingo path format: the pack schema, its validator, the atingo-path crate and the typed kernel client.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "packs:check": "node tools/packs/check.mjs examples/sample-pack",
+    "rust:check": "cargo check -p atingo-path",
+    "client:check": "node packages/client/generate.mjs --check && npm run typecheck -w packages/client && npm test -w packages/client"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "openapi-typescript": "7.4.4",
+    "typescript": "5.6.3"
+  }
+}

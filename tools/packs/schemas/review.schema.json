@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "path_id",
+    "nodes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "path_id": {
+      "type": "string"
+    },
+    "_comment": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "engine",
+          "desired_retention",
+          "max_interval_days",
+          "items_from"
+        ],
+        "properties": {
+          "engine": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desired_retention": {
+            "type": "number"
+          },
+          "max_interval_days": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "first_interval_days": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "items_from": {
+            "enum": [
+              "lesson_steps",
+              "graph_items"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

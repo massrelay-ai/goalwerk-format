@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "country", "currency", "amount", "amount_mu", "tax", "rails", "period"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+    "_comment": { "type": "string" },
+    "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "amount": { "type": "number", "exclusiveMinimum": 0 },
+    "amount_mu": { "type": "number", "exclusiveMinimum": 0 },
+    "tax": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "rate_bp"],
+      "properties": { "kind": { "type": "string", "pattern": "^[A-Z]+$" }, "rate_bp": { "type": "integer", "minimum": 0, "maximum": 10000 } }
+    },
+    "rails": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "period": { "enum": ["one_off", "monthly"] }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["key", "persona", "taskTemplate", "toolConfigRef", "evalSetRef", "atingo"],
+  "additionalProperties": false,
+  "properties": {
+    "key": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "persona": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "taskTemplate": { "type": "string", "minLength": 1, "maxLength": 1200 },
+    "toolConfigRef": { "type": ["string", "null"] },
+    "evalSetRef": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "_comment": { "type": "string" },
+    "atingo": {
+      "type": "object",
+      "required": ["path_families", "voice", "never"],
+      "properties": {
+        "path_families": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "voice": { "enum": ["coach", "tutor", "reviewer"] },
+        "never": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    }
+  }
+}

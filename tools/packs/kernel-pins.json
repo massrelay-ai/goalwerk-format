@@ -1,0 +1,92 @@
+{
+  "kernel_sha": "0d2e72984",
+  "block_kinds": [
+    "approve",
+    "board",
+    "chart",
+    "checklist",
+    "choose_one",
+    "compare_two",
+    "compare_two_people",
+    "decision",
+    "form",
+    "gallery",
+    "map_pins",
+    "person_card",
+    "pick_slot",
+    "product_card",
+    "progress",
+    "rank",
+    "table",
+    "timeline"
+  ],
+  "people_kinds": [
+    "accountability-partners",
+    "care-circle",
+    "carpool-commute",
+    "cohort-teams",
+    "community-mutual-aid",
+    "events-meetups",
+    "flatmate-co-living",
+    "hiring-intros",
+    "mentorship-office-hours",
+    "neighbourhood-help",
+    "pet-care-swaps",
+    "skill-exchange",
+    "sports-partners",
+    "trip-room"
+  ],
+  "nudge_channels": [
+    "discord",
+    "email",
+    "gchat",
+    "kakao",
+    "lark",
+    "line",
+    "mail",
+    "matrix",
+    "messenger",
+    "push",
+    "signal",
+    "slack",
+    "sms",
+    "teams",
+    "telegram",
+    "viber",
+    "voice",
+    "wechat",
+    "whatsapp"
+  ],
+  "verifier_kinds": [
+    "key_result",
+    "eval_suite",
+    "script",
+    "professional_signoff",
+    "attestation"
+  ],
+  "locales": [
+    "id",
+    "en"
+  ],
+  "countries": {
+    "ID": {
+      "currencies": [
+        "IDR"
+      ],
+      "rails": [
+        "bank_transfer",
+        "qris",
+        "virtual_account"
+      ],
+      "receipt_fields": [
+        "legal_name",
+        "tax_id_npwp",
+        "invoice_number",
+        "issued_at",
+        "vat_line",
+        "total_mu"
+      ],
+      "confirmed": false
+    }
+  }
+}

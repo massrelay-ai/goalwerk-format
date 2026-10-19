@@ -1,0 +1,31 @@
+{
+  "id": "sample.share",
+  "title": "{level} — share a cutting",
+  "items_kind": "steps",
+  "template": {
+    "title": "{level}: share a cutting",
+    "step_prompt": "{prompt}",
+    "evidence_hint": "{evidence_hint}",
+    "steps_per_lesson": 3,
+    "review_max": 1
+  },
+  "levels": [
+    {
+      "id": "hand_over",
+      "steps": [
+        {
+          "prompt": "Cut a healthy stem below a leaf joint.",
+          "evidence_hint": "The date you wrote, in the form."
+        },
+        {
+          "prompt": "Stand it in water until roots show.",
+          "evidence_hint": "The pot and its placement, in the form."
+        },
+        {
+          "prompt": "Give it to a neighbour and write down who has it.",
+          "evidence_hint": "The note you made, in the form."
+        }
+      ]
+    }
+  ]
+}

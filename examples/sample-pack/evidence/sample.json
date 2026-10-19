@@ -1,0 +1,47 @@
+{
+  "path_id": "sample",
+  "nodes": {
+    "sow": {
+      "verifier": "key_result",
+      "binding": {
+        "connector_id": "piece:sample-log",
+        "expect": {
+          "field": "sprouts",
+          "op": ">=",
+          "value": "1"
+        }
+      },
+      "fallback": "attestation",
+      "sources_of_truth": [
+        "piece:sample-log",
+        "attestation"
+      ]
+    },
+    "tend": {
+      "verifier": "key_result",
+      "binding": {
+        "connector_id": "piece:sample-log",
+        "expect": {
+          "field": "weeks_alive",
+          "op": ">=",
+          "value": "4"
+        }
+      },
+      "fallback": "attestation",
+      "sources_of_truth": [
+        "piece:sample-log",
+        "attestation"
+      ]
+    },
+    "share": {
+      "verifier": "professional_signoff",
+      "binding": {
+        "method_id": "professional_signoff"
+      },
+      "fallback": "none",
+      "sources_of_truth": [
+        "method:professional_signoff"
+      ]
+    }
+  }
+}

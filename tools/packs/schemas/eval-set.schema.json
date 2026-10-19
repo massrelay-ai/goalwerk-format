@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "prompt", "mustContain", "mustNotContain", "intent", "why"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "prompt": { "type": "string", "minLength": 1 },
+      "mustContain": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+      "mustNotContain": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+      "intent": { "enum": ["first_step", "evidence_ask", "no_skip", "protected_ground", "no_guarantee"] },
+      "why": { "type": "string", "minLength": 1 }
+    }
+  }
+}

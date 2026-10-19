@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "competencies"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "competencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "kind",
+          "part_of"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^comp:[a-z0-9-]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "skill",
+              "knowledge",
+              "activity",
+              "topic"
+            ]
+          },
+          "onet_element": {
+            "type": "string"
+          },
+          "part_of": {
+            "type": "string",
+            "pattern": "^sector:[a-z0-9-]+$"
+          },
+          "requires": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^comp:[a-z0-9-]+$"
+            }
+          },
+          "occupations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^occ:"
+            }
+          }
+        }
+      }
+    }
+  }
+}

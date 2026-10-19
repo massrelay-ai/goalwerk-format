@@ -1,0 +1,31 @@
+{
+  "id": "sample.sow",
+  "title": "{level} — sow a seed",
+  "items_kind": "steps",
+  "template": {
+    "title": "{level}: sow a seed",
+    "step_prompt": "{prompt}",
+    "evidence_hint": "{evidence_hint}",
+    "steps_per_lesson": 3,
+    "review_max": 1
+  },
+  "levels": [
+    {
+      "id": "start",
+      "steps": [
+        {
+          "prompt": "Fill a small pot with damp soil.",
+          "evidence_hint": "The date you wrote, in the form."
+        },
+        {
+          "prompt": "Press one seed in, at the depth on its packet.",
+          "evidence_hint": "The pot and its placement, in the form."
+        },
+        {
+          "prompt": "Put the pot on a bright sill and note the date.",
+          "evidence_hint": "The note you made, in the form."
+        }
+      ]
+    }
+  ]
+}

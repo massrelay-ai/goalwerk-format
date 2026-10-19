@@ -1,0 +1,11 @@
+Atingo format
+Copyright 2026 Atingo contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). The content of examples/sample-pack/ is licensed under CC BY-SA 4.0.
+
+This product includes material taken from the massrelay kernel repository (Apache-2.0, same owner):
+- packages/client/openapi/massrelay.json — the kernel's public OpenAPI contract, vendored as a snapshot (recorded in packages/client/openapi/SOURCE.json);
+- packages/client/src/kernel.d.ts — generated from that contract with openapi-typescript (MIT).
+- tools/packs/kernel-pins.json — the kernel's block kinds, people kinds, nudge channels and verifier kinds, pinned at a kernel commit.
+
+Third-party dependencies are named in package.json and Cargo.toml under their own licences (ajv MIT, ajv-formats MIT, openapi-typescript MIT, typescript Apache-2.0, serde MIT/Apache-2.0, wasm-bindgen MIT/Apache-2.0).

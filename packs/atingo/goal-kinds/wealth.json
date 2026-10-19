@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "family": "wealth",
+  "_comment": "The five 'getting ahead' goal kinds (the brief §2.1). Each names its evidence and its verifier; none is 'mark as done'. Catalogue rows in the kernel first (handover 1.4).",
+  "kinds": [
+    { "id": "save_first_amount", "title": "Save a first amount", "evidence_kind": "wallet_balance", "verifier": "key_result", "window_days": 90, "attestation_fallback": true },
+    { "id": "earn_first_client", "title": "Earn a first paying client", "evidence_kind": "receipt", "verifier": "key_result", "window_days": 120, "attestation_fallback": false },
+    { "id": "pass_certification", "title": "Pass a certification", "evidence_kind": "document", "verifier": "eval_suite", "window_days": 180, "attestation_fallback": false },
+    { "id": "start_a_side_business", "title": "Start a side business", "evidence_kind": "entity_row", "verifier": "professional_signoff", "window_days": 180, "attestation_fallback": false },
+    { "id": "reach_monthly_income", "title": "Reach a monthly income", "evidence_kind": "connector_value", "verifier": "key_result", "window_days": 365, "attestation_fallback": true }
+  ]
+}

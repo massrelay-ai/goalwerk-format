@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "family", "kinds"],
+  "properties": {
+    "version": { "type": "integer" },
+    "family": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+    "_comment": { "type": "string" },
+    "kinds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "evidence_kind", "verifier", "window_days", "attestation_fallback"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "evidence_kind": { "enum": ["wallet_balance", "receipt", "document", "entity_row", "connector_value", "attestation"] },
+          "verifier": { "enum": ["key_result", "eval_suite", "script", "professional_signoff", "attestation"] },
+          "window_days": { "type": "integer", "minimum": 1 },
+          "attestation_fallback": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

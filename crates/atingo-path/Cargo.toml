@@ -1,0 +1,22 @@
+[package]
+name = "atingo-path"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+publish = false
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+wasm-bindgen = { version = "0.2", optional = true }
+fsrs = "=6.6.2"
+
+[features]
+wasm = ["dep:wasm-bindgen"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# fsrs -> rand -> getrandom has no entropy source on wasm32-unknown-unknown; scheduling never draws random numbers, this only lets the build link.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.4", features = ["wasm_js"] }

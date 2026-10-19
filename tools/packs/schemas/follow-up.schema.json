@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["path_id", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "path_id": { "type": "string" },
+    "_comment": { "type": "string" },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rrule", "grace_days", "nudges", "escalate", "pause_rules"],
+        "properties": {
+          "rrule": { "type": "string", "minLength": 1 },
+          "grace_days": { "type": "integer", "minimum": 0 },
+          "nudges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["after_hours", "channel", "template_id"],
+              "properties": { "after_hours": { "type": "integer", "minimum": 0 }, "channel": { "type": "string" }, "template_id": { "type": "string", "pattern": "^[a-z0-9_]+$" } }
+            }
+          },
+          "escalate": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["after_days", "to"],
+            "properties": { "after_days": { "type": "integer", "minimum": 1 }, "to": { "type": "string" } }
+          },
+          "pause_rules": { "type": "array", "items": { "enum": ["learner_paused", "payment_hold"] } }
+        }
+      }
+    }
+  }
+}

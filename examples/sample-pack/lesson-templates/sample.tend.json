@@ -1,0 +1,31 @@
+{
+  "id": "sample.tend",
+  "title": "{level} — tend a plant",
+  "items_kind": "steps",
+  "template": {
+    "title": "{level}: tend a plant",
+    "step_prompt": "{prompt}",
+    "evidence_hint": "{evidence_hint}",
+    "steps_per_lesson": 3,
+    "review_max": 1
+  },
+  "levels": [
+    {
+      "id": "routine",
+      "steps": [
+        {
+          "prompt": "Check the soil with a finger before watering.",
+          "evidence_hint": "The date you wrote, in the form."
+        },
+        {
+          "prompt": "Water only when the top of the soil is dry.",
+          "evidence_hint": "The pot and its placement, in the form."
+        },
+        {
+          "prompt": "Turn the pot a quarter each week and note a leaf count.",
+          "evidence_hint": "The note you made, in the form."
+        }
+      ]
+    }
+  ]
+}

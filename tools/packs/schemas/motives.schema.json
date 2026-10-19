@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "motives"],
+  "properties": {
+    "version": { "type": "integer" },
+    "_comment": { "type": "string" },
+    "motives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "line", "promise", "entry_paths", "targeting"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "line": { "type": "string" },
+          "promise": { "type": "string" },
+          "entry_paths": { "type": "array", "items": { "type": "string" } },
+          "targeting": { "const": "declared_goal_only" }
+        }
+      }
+    }
+  }
+}

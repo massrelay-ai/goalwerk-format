@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "tier", "title", "locale_default", "root", "nodes", "edges", "people_kinds_by_node"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "_comment": { "type": "string" },
+    "tier": { "enum": ["platform", "creator", "self"] },
+    "title": { "type": "string" },
+    "locale_default": { "type": "string" },
+    "persona": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "root": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "goal_kind", "lesson_template", "blocks_allowed", "evidence", "receipt_kind", "sources"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "goal_kind": { "type": "string" },
+          "lesson_template": { "type": "string" },
+          "blocks_allowed": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "string" },
+          "receipt_kind": { "type": "string" },
+          "sources": { "type": "array" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to", "kind"],
+        "properties": { "from": { "type": "string" }, "to": { "type": "string" }, "kind": { "enum": ["prerequisite", "branch"] } }
+      }
+    },
+    "people_kinds_by_node": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } },
+    "price_ref": { "type": ["string", "null"] },
+    "certificate": { "type": ["object", "null"] }
+  }
+}

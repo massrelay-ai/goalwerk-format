@@ -1,0 +1,15 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import { KernelClient, UNTYPED_DOORS } from '../src/index.ts'; import { readFileSync } from 'node:fs';
+test('builds a GET url with the bearer header', async () => { let seen: any; const c = new KernelClient({ baseUrl: 'https://k.example', token: 't', fetch: async (u: any, i: any) => { seen = { u: String(u), i }; return new Response('{"ok":true}', { status: 200 }); } });
+  const r = await c.get('/public/version'); assert.equal(r.ok, true); assert.equal(seen.u, 'https://k.example/public/version'); assert.equal(seen.i.headers.authorization, 'Bearer t'); });
+test('a non-2xx answer throws with the status and the body', async () => { const c = new KernelClient({ baseUrl: 'https://k.example', token: 't', fetch: async () => new Response('{"error":"refused"}', { status: 402 }) }); await assert.rejects(() => c.get('/public/version'), /402 .*refused/); });
+test('the untyped doors list shrinks when the contract gains a door (M1)', () => { const doc = JSON.parse(readFileSync(new URL('../openapi/massrelay-full.json', import.meta.url), 'utf8')); const present = UNTYPED_DOORS.filter((d) => d in doc.paths); assert.deepEqual(present, [], `remove from UNTYPED_DOORS, the contract now has: ${present.join(', ')}`); });
+test('{param} segments are filled from params and encoded; an untyped door is callable', async () => { let seen = ''; const c = new KernelClient({ baseUrl: 'https://k.example', fetch: async (u: any) => { seen = String(u); return new Response('{}', { status: 200 }); } });
+  await c.get('/api/rooms/{room_id}/receipts', undefined, { room_id: 'a b/1' }); assert.equal(seen, 'https://k.example/api/rooms/a%20b%2F1/receipts');
+  await c.get('/api/me/progress'); assert.equal(seen, 'https://k.example/api/me/progress'); });
+test('a missing param is refused, never sent as a literal brace', async () => { const c = new KernelClient({ baseUrl: 'https://k.example', fetch: async () => new Response('{}') }); await assert.rejects(() => c.get('/api/rooms/{room_id}/receipts'), /missing param room_id/); });
+test('a 402 error carries its status and parsed body', async () => { const c = new KernelClient({ baseUrl: 'https://k.example', fetch: async () => new Response('{"price":{"amount":1}}', { status: 402 }) }); await assert.rejects(() => c.get('/api/me/progress'), (e: any) => e.status === 402 && e.body.price.amount === 1); });
+test('the default fetch is called detached (a browser throws "Illegal invocation" when fetch runs as a method of another object)', async () => { const real = globalThis.fetch; let thisArg: unknown = 'unset';
+  globalThis.fetch = (async function (this: unknown) { thisArg = this; return new Response('{}', { status: 200 }); }) as typeof fetch;
+  try { await new KernelClient({ baseUrl: 'https://k.example' }).get('/public/version'); } finally { globalThis.fetch = real; }
+  assert.ok(thisArg === undefined || thisArg === globalThis, 'fetch ran with this = ' + String((thisArg as any)?.constructor?.name)); });
